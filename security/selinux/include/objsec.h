@@ -182,8 +182,6 @@ static inline struct ipc_security_struct *selinux_ipc(
 /*
  * get the subjective security ID of the current task
  */
-#ifndef CURRENT_SID_DEFINED
-#define CURRENT_SID_DEFINED
 static inline u32 current_sid(void)
 {
 	const struct task_security_struct *tsec = selinux_cred(current_cred());
